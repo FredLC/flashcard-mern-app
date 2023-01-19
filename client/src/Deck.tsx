@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { createCard } from "./api/createCard";
 import { TDeck } from "./api/getDecks";
 import { getDeck } from "./api/getDeck";
@@ -37,7 +37,8 @@ function Deck() {
 
   return (
     <div className="App">
-      <ul className="decks">
+      <h1>{deck?.title}</h1>
+      <ul className="cards">
         {cards.map((card, index) => (
           <li key={index}>
             <button onClick={() => handleDeleteCard(index)}>X</button>

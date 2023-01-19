@@ -31,7 +31,8 @@ function App() {
 
   return (
     <div className="App">
-      <ul className="decks">
+      <h1>Your Decks</h1>
+      <ul className="cards">
         {decks.map((deck) => (
           <li key={deck._id}>
             <button onClick={() => handleDeleteDeck(deck._id)}>X</button>
